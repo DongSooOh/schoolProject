@@ -2375,7 +2375,7 @@ select * from grade;
 select * from student;
 select * from teacher;
 select * from subject;
-
+select * from attendance;
 select * from grade;
 
 select * 
@@ -2385,8 +2385,7 @@ on student.st_no = grade.st_no
 where student.st_no = 'st011';
 
 SELECT * 
-FROM student 
-WHERE st_no = 'st003';
+FROM student ;
 
 SELECT * 
 FROM grade 
@@ -2432,8 +2431,7 @@ values('sub001', '국어')
 select grade.grade_no, grade.st_no, grade.sub_no, grade.semester, grade.score, teacher.tc_no, teacher.tc_name
 from grade
 join subject ON grade.sub_no = subject.sub_no
-join teacher ON subject.sub_no = teacher.sub_no
-where teacher.tc_no = 'tc001';
+join teacher ON subject.sub_no = teacher.sub_no;
 
 select teacher.tc_no, teacher.sub_no, grade.st_no, grade.semester, grade.score
 from teacher
